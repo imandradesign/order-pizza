@@ -15,12 +15,17 @@
       </div>
 
       <form id="pizza">
-
-        <button type="submit" class="btn" id="sub-btn">Place order</button>
+        <h5>Choose at least one topping:</h5>
+        <input name="topping" value="Pepperoni" type="checkbox">Pepperoni<br>
+        <input name="topping" value="Black Olives" type="checkbox">Black Olives<br>
+        <input name="topping" value="Red Onion" type="checkbox">Red Onion<br>
+        <input name="topping" value="Sausage" type="checkbox">Sausage<br>
+        <button type="button" class="btn" id="sub-btn">Place order</button>
       </form>
 
-      <div class="results" id="">
-
+      <div class="results" id="results">
+        <h3>Your pizza order:</h3><br>
+        <span id="result"></span>
       </div>
     </div>
   </body>
