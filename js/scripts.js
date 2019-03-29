@@ -26,6 +26,12 @@ Pizza.prototype.totalCost = function(){
   } else if ($("input:radio[name=size]:checked").val() === "Large"){
     this.price = 20
   }
+
+  if (this.toppings.length > 1){
+    for (var i = 0; i < this.toppings.length - 1; i++){
+      this.price = this.price + 1;
+    }
+  }
 };
 
 
