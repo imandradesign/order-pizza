@@ -4,7 +4,22 @@ var pizza = new Pizza();
 function Pizza(){
   this.toppings = [];
   this.size = [];
+  this.price = 0;
 }
+
+Pizza.prototype.fullOrder = function(){
+  return "<strong>Size: </strong>" + this.size + "<br><strong>Toppings: </strong>" + this.toppings + "<br><strong>Total: </strong>$" + this.price
+}
+
+/* Pizza.prototype.totalCost = function(){
+  if (this.size === "Small"){
+    this.price += 10
+  } else if (this.size === "Medium"){
+    this.price += 15
+  } else if (this.size === "Large"){
+    this.price += 20
+  }
+}; */
 
 
 // User logic
@@ -16,31 +31,14 @@ $(document).ready(function(){
 
     var sizeInput = pizza.size.push($("input:radio[name=size]:checked").val());
     var toppingInputs = $("input:checkbox[name=topping]:checked").map(function(){
-      pizza.toppings.push($(this).val())
+      pizza.toppings.push($(this).val());
     });
 
 
-    $("#size").text(pizza.size)
-    $("#toppingList").text(pizza.toppings);
+    $("#order").append(pizza.fullOrder());
     $(".results").show();
 
     pizza.toppings = [];
     pizza.size = [];
   });
 });
-
-/* $(document).ready(function(){
-  var tmp = [];
-  $("input").click(function() {
-    if ($(this).is(':checked')) {
-      var checked = ($(this).val());
-      tmp.push(checked);
-    } else {
-      tmp.splice($.inArray(checked, tmp),1);
-    }
-  });
-
-    $('#sub-btn').on('click', function () {
-      alert(tmp)
-    });
-}); */
