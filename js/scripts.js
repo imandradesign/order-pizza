@@ -5,17 +5,20 @@ function Pizza(){
   this.toppings = [];
 }
 
-Pizza.prototype.allToppings = function(){
-  this.toppings.push(toppingInputs.get())
+Pizza.prototype.allToppings = function(toppingInputs){
+  this.toppings.push(toppingInputs)
 }
 
 $(document).ready(function(){
-  $("form#pizza").click(function(event){
+  $("form#pizza").submit(function(event){
+    event.preventDefault();
     var toppingInputs = $("input:checkbox[name=topping]:checked").map(function(){
       return $(this).val()
     });
+    pizza.toppings.push(toppingInputs.get());
 
-    $("#result").text(toppingInputs.get())
+    $("#result").text(pizza.toppings);
+    pizza.toppings = []
   });
 });
 
