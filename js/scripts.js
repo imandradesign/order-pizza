@@ -3,22 +3,29 @@ var pizza = new Pizza();
 
 function Pizza(){
   this.toppings = [];
+  this.size = [];
 }
 
-Pizza.prototype.allToppings = function(toppingInputs){
-  this.toppings.push(toppingInputs)
-}
 
+// User logic
 $(document).ready(function(){
+  $(".results").hide();
+
   $("form#pizza").submit(function(event){
     event.preventDefault();
-    var toppingInputs = $("input:checkbox[name=topping]:checked").map(function(){
-      return $(this).val()
-    });
-    pizza.toppings.push(toppingInputs.get());
 
-    $("#result").text(pizza.toppings);
-    pizza.toppings = []
+    var sizeInput = pizza.size.push($("input:radio[name=size]:checked").val());
+    var toppingInputs = $("input:checkbox[name=topping]:checked").map(function(){
+      pizza.toppings.push($(this).val())
+    });
+
+
+    $("#size").text(pizza.size)
+    $("#toppingList").text(pizza.toppings);
+    $(".results").show();
+
+    pizza.toppings = [];
+    pizza.size = [];
   });
 });
 

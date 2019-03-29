@@ -15,6 +15,25 @@
       </div>
 
       <form id="pizza">
+        <h5>Select a size:</h5>
+        <div class="radio">
+          <label>
+          <input type="radio" name="size" value="Small" checked>
+          Small
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input type="radio" name="size" value="Medium">
+          Medium
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+          <input type="radio" name="size" value="Large">
+          Large
+          </label>
+        </div>
         <h5>Choose at least one topping:</h5>
         <input name="topping" value="Pepperoni" type="checkbox">Pepperoni<br>
         <input name="topping" value="Black Olives" type="checkbox">Black Olives<br>
@@ -25,7 +44,8 @@
 
       <div class="results" id="results">
         <h3>Your pizza order:</h3><br>
-        <span id="result"></span>
+        <h6><strong>Size: </strong><span id="size"></span><br>
+        <strong>Toppings: </strong><span id="toppingList"></span></h6>
       </div>
     </div>
   </body>
