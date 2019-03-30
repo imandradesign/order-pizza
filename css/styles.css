@@ -1,4 +1,45 @@
+body {
+  background-color: #fff7e0;
+}
+
+.head {
+  font-family: chypre-normal, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #fff7e0;
+  text-shadow: -1.4px 0 black, 0 1.4px black, 1.4px 0 black, 0 -1.4px black;
+  letter-spacing: 2px;
+}
+
+.content {
+  font-family: chypre-normal, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
 .jumbotron {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(200,68,23,1) 35%, rgba(255,236,0,1) 100%);
-  color: white;
+  background: linear-gradient(90deg, #72240a 0%, rgba(200,68,23,1) 35%, #ffc100 100%);
+}
+
+#logo {
+  max-width: 250px;
+}
+
+input {
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+#tagline {
+  text-decoration: underline;
+}
+
+#order-text {
+  margin-left: 20px;
+}
+
+#sub-btn {
+  background-color: rgba(200,68,23,1);
+  font-size: 20px;
+  margin: 20px;
 }

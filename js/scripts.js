@@ -9,21 +9,22 @@ function Pizza(){
 
 Pizza.prototype.isEmpty = function() {
   if (this.toppings.length === 0){
-    alert("Please enter at least one topping");
+    alert("Please select at least one topping");
     $(".results").hide();
   }
 }
 
 Pizza.prototype.fullOrder = function(){
-  return "<span id='order'><strong>Size: </strong>" + this.size + "<br><strong>Toppings: </strong>" + this.toppings + "<br><strong>Total: </strong>$" + this.price + "</span>"
+  return "<span id='order'><strong>Size: </strong>" + this.size + "<br><br><strong>Toppings: </strong>" + this.toppings + "<br><br><strong>Total: </strong>$" + this.price + "</span>"
 }
 
 Pizza.prototype.totalCost = function(){
-  if ($("input:radio[name=size]:checked").val() === "Small"){
+  var size = $("input:radio[name=size]:checked").val();
+  if (size === "Small"){
     this.price = 10
-  } else if ($("input:radio[name=size]:checked").val() === "Medium"){
+  } else if (size === "Medium"){
     this.price = 15
-  } else if ($("input:radio[name=size]:checked").val() === "Large"){
+  } else if (size === "Large"){
     this.price = 20
   }
 

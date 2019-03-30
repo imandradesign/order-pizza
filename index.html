@@ -10,59 +10,66 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <div class="row">
-          <div class="col-md-8">
-            <h2>Order Pizza</h2>
-          </div>
-          <div class="col-md-4">
-            <br><br>
-            <h5 id="tagline">Pricing</h5>
-            <h6>Single topping:</h6>
-            <ul>
-              <li>Small $10</li>
-              <li>Medium $15</li>
-              <li>Large $20</li>
-            </ul>
-            <h6>All additional toppings are $1 each.</h6>
+      <div class="head">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col-md-8">
+              <br><br>
+              <h5 id="tagline">Pricing</h5>
+              <h6>Single topping:</h6>
+              <ul>
+                <li>Small $10</li>
+                <li>Medium $15</li>
+                <li>Large $20</li>
+              </ul>
+              <h6>All additional toppings are $1 each.</h6>
+            </div>
+            <div class="col-md-4">
+              <img src="img/pizza-logo.png" alt="Order Pizza" id="logo">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-8">
-          <form id="pizza">
-            <h5>Select a size:</h5>
-            <div class="radio">
-              <label>
-              <input type="radio" name="size" value="Small" checked>
-              Small
-              </label>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Place your order:</h3>
+            <form id="pizza">
+              <h5>Select a size:</h5>
+              <div class="radio">
+                <label>
+                <input type="radio" name="size" value="Small" checked>
+                Small
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                <input type="radio" name="size" value="Medium">
+                Medium
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                <input type="radio" name="size" value="Large">
+                Large
+                </label>
+              </div>
+
+              <h5>Choose at least one topping:</h5>
+              <input name="topping" value=" Pepperoni" type="checkbox"> Pepperoni<br>
+              <input name="topping" value=" Sausage" type="checkbox"> Sausage<br>
+              <input name="topping" value=" Black Olives" type="checkbox"> Black Olives<br>
+              <input name="topping" value=" Red Onion" type="checkbox"> Red Onion<br>
+              <button type="submit" class="btn" id="sub-btn">Place order</button>
+            </form>
+          </div>
+
+          <div class="col-md-4">
+            <div class="results">
+              <h3>Your pizza order:</h3><br>
+              <h5 id="order-text"><span id="results"></span></h5>
             </div>
-            <div class="radio">
-              <label>
-              <input type="radio" name="size" value="Medium">
-              Medium
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-              <input type="radio" name="size" value="Large">
-              Large
-              </label>
-            </div>
-            <h5>Choose at least one topping:</h5>
-            <input name="topping" value="Pepperoni" type="checkbox">Pepperoni<br>
-            <input name="topping" value="Sausage" type="checkbox">Sausage<br>
-            <input name="topping" value="Black Olives" type="checkbox">Black Olives<br>
-            <input name="topping" value="Red Onion" type="checkbox">Red Onion<br>
-            <button type="submit" class="btn" id="sub-btn">Place order</button>
-          </form>
-        </div>
-        <div class="col-md-4">
-          <div class="results">
-            <h3>Your pizza order:</h3><br>
-            <h6><span id="results"></span></h6>
           </div>
         </div>
       </div>
