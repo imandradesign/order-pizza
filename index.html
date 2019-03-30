@@ -33,39 +33,41 @@
 
       <div class="content">
         <div class="row">
-          <div class="col-md-8">
-            <h3>Place your order:</h3>
-            <form id="pizza">
-              <h5>Select a size:</h5>
-              <div class="radio">
-                <label>
-                <input type="radio" name="size" value="Small" checked>
-                Small
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                <input type="radio" name="size" value="Medium">
-                Medium
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                <input type="radio" name="size" value="Large">
-                Large
-                </label>
-              </div>
+          <div class="col-md-7">
+            <div class="form-column">
+              <h3>Place your order:</h3>
+              <form id="pizza">
+                <h5>Select a size:</h5>
+                <div class="radio">
+                  <label>
+                  <input type="radio" name="size" value="Small" checked>
+                  Small
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" name="size" value="Medium">
+                  Medium
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                  <input type="radio" name="size" value="Large">
+                  Large
+                  </label>
+                </div>
 
-              <h5>Choose at least one topping:</h5>
-              <input name="topping" value=" Pepperoni" type="checkbox"> Pepperoni<br>
-              <input name="topping" value=" Sausage" type="checkbox"> Sausage<br>
-              <input name="topping" value=" Black Olives" type="checkbox"> Black Olives<br>
-              <input name="topping" value=" Red Onion" type="checkbox"> Red Onion<br>
-              <button type="submit" class="btn" id="sub-btn">Place order</button>
-            </form>
+                <h5>Choose at least one topping:</h5>
+                <input name="topping" value=" Pepperoni" type="checkbox"> Pepperoni<br>
+                <input name="topping" value=" Sausage" type="checkbox"> Sausage<br>
+                <input name="topping" value=" Black Olives" type="checkbox"> Black Olives<br>
+                <input name="topping" value=" Red Onion" type="checkbox"> Red Onion<br>
+                <button type="submit" class="btn" id="sub-btn">Place order</button>
+              </form>
+            </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="results">
               <h3>Your pizza order:</h3><br>
               <h5 id="order-text"><span id="results"></span></h5>

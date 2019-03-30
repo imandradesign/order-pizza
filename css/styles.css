@@ -21,6 +21,10 @@ body {
   background: linear-gradient(90deg, #72240a 0%, rgba(200,68,23,1) 35%, #ffc100 100%);
 }
 
+.form-column {
+  margin-left: 100px;
+}
+
 #logo {
   max-width: 250px;
 }
