@@ -1,12 +1,12 @@
 # Imandra's Pizza Ordering Project
 
-##### _This is my third solo coding project with Epicodus with a form to fill out with your desired pizza toppings that calculates the total cost and lists the order information. Latest version: March 2019._
+##### _This is my third solo coding project with Epicodus with a form to fill out with your desired pizza size and toppings that calculates the total cost and lists the order information. Latest version: March 2019._
 
 #### By _**Imandra McKenzie**_
 
 ## Description
 
-_This page has a form to collect information from the visitor and return pizza toppings and total cost after submission._
+_This page has a form to collect information from the visitor and return pizza size, toppings, and total cost after submission._
 
 ## Setup
 
